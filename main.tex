@@ -1,0 +1,84 @@
+\documentclass[a4paper,12pt]{article}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ruled,linesnumbered]{algorithm2e}
+\usepackage{float}
+\usepackage{import}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,epsfig,epstopdf,titling,url,array}
+\usepackage{natbib}
+
+\theoremstyle{plain}
+\newtheorem{case}{Case}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{example}{Example}[section]
+
+
+\title{Characterizing Interval Graphs}
+\author{ZHISHENG XU}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+\section{Abstract}
+An undirected graph is an $interval\;graph$ if we can create a model with an interval for each vertex
+and two vertices $v_i$ and $v_j$ are adjacent whenever the two corresponding intervals intersect.
+As an important subclass of perfect graphs with rich structures and history, the class of interval graphs has been studied for decades
+and has applications in various combinatorial optimization and decision problems. It is also closely related to other graph classes such as chordal graphs, comparability graphs, and permutation graphs.\paragraph{}
+This exam will explore its properties in the following aspects:
+\begin{enumerate}
+  \item Chordal graphs and interval graph characterizations.
+  \item A linear time recognition algorithm.
+  \item Forbidden structures and how to find them.
+\end{enumerate}
+
+Initial Papers: \cite{rose1976algorithmic}, \cite{lekkerkerker1962representation}, \cite{lindzey2016linear}, \cite{tucker1972structure}, \cite{booth1976testing}
+\newpage
+\tableofcontents
+\newpage
+
+
+
+
+
+\import{sections/}{introduction.tex}
+\import{sections/}{notations.tex}
+
+
+\import{sections/}{chordal.tex}
+\import{sections/}{interval_recognition.tex}
+\import{sections/}{forbidden_structure.tex}
+
+
+
+
+
+\bibliographystyle{unsrt}
+\bibliography{reference}
+
+%\input{reference.bbl}
+\end{document}

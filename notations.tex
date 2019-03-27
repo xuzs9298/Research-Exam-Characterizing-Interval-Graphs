@@ -1,0 +1,8 @@
+\section{Notation}
+A graph $G(V,E)$ is denoted with set of vertices $V$ and set of edges $E$. The set of neighbors of a vertex $x$ is noted $N(x)$. The \emph{closed neighborhood} of $x$ is defined by $N[x] = N(x) \cup x$. A $clique$ $C$ is a subset of $V$ such that $xy\in E$ for any $x,y \in C$. A clique $C$ is a \emph{maximal clique} if there does not exist a vertex $x$ such that $C\cup\{x\}$ is a clique. 
+A vertex $x$ is a \emph{simplicial vertex} if $N(x)$ is a clique. A $path$ is a sequence of vertices $(v_0,v_1,...v_k)$ ($k \le 1$) that consecutive vertices $v_{i}v_{i+1}$ has an edge for $0\le i\le k-1$. If no other edges connecting non-consecutive vertices exists, it is an irreducible path. If a path contains no repeat vertices, it is a \emph{simple path}. A $cycle$ is a loop of vertices $(v_0,v_1,...v_k,v_0)$ such that consecutive vertices has an edge. It is a \emph{irreducible cycle} if no other edges between two nonconsecutive vertices exists.
+An \emph{induced subgraph} $G_S$ is a subset $S$ of the vertices of a graph $G(V,E)$ together with any edges whose endpoints are both in $S$.
+The \emph{set union} $A\cup B$, is defined by $A\cup B = \{x| x\in A\;or\;x \in B\}$. If $A$ and $B$ are disjoint, $A \cup B$ can also be denoted $A + B$.
+The set difference $A-B$ is defined by $A-B = \{x| x \in A\;and\; x \notin B\}$. For a set of vertices $S$, let $G-S$ be $G_{V-S}$.
+The size of a binary matrix $size(M)$ is the number of rows, columns, and 1's in $M$.
+
